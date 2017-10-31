@@ -1,0 +1,45 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - spec/rails_helper.rb
+    - spec/spec_helper.rb
+    - bin/**/*
+    - spec/dummy/bin/**/*
+    - spec/dummy/db/migrate/*
+    - spec/dummy/db/schema.rb
+
+
+  DisplayCopNames: true
+
+Metrics/LineLength:
+  Exclude:
+    - classnames-rails-view.gemspec
+    - spec/dummy/config/**/*
+    - spec/dummy/Rakefile
+
+Rails:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+
+Layout/IndentationConsistency:
+  EnforcedStyle: rails
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+
+Layout/IndentHash:
+  EnforcedStyle: 'consistent'
+
+Layout/AlignParameters:
+  EnforcedStyle: 'with_fixed_indentation'
+
+Layout/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false

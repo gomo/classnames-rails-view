@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Classnames::Rails::View::VERSION
   s.authors     = ["Masamoto Miyata"]
   s.email       = ["miyata@sincere-co.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Classnames::Rails::View."
-  s.description = "TODO: Description of Classnames::Rails::View."
+  s.homepage    = "https://github.com/gomo/classnames-rails-view"
+  s.summary     = "The helper method to dynamically generate class attribute of HTML tag."
+  s.description = "Make methods similar to Javascript 's classnames available in the rails erb template."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

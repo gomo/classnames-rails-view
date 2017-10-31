@@ -3,10 +3,10 @@ module Classnames
     module View
       class Core
         def exec(*args)
-          args
-            .map {|arg| detect_elem arg }
-            .reject {|value| value == '' }
-            .join ' '
+          args.inject '' do |out, arg|
+            detected = detect_elem arg
+            arg == '' ? out : out << detected << ' '
+          end.strip
         end
 
         private
@@ -17,10 +17,9 @@ module Classnames
               raise Error, 'The arguments must be a String or Hash.'
             end
 
-            elem
-              .select {|_key, value| value }
-              .map {|key, _value| key.to_s }
-              .join ' '
+            elem.inject '' do |out, (key, value)|
+              value ? out << key.to_s << ' ' : out
+            end.strip
           end
       end
     end

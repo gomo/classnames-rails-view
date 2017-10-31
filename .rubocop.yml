@@ -18,6 +18,10 @@ Metrics/LineLength:
     - spec/dummy/config/**/*
     - spec/dummy/Rakefile
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
 Rails:
   Enabled: true
 
@@ -43,3 +47,13 @@ Layout/AlignParameters:
 
 Layout/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+
+Metrics/LineLength:
+  Max: 128
+  AllowURI: true
+  URISchemes:
+    - http
+    - https

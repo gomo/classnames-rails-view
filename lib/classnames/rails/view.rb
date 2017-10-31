@@ -2,7 +2,7 @@ require 'classnames/rails/view/core'
 module Classnames
   module Rails
     module View
-      # Your code goes here...
+      class Error < StandardError; end
     end
   end
 end

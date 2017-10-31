@@ -12,14 +12,13 @@ module Classnames
         private
 
           def detect_elem(elem)
-            return elem if elem.is_a?(String)
-            unless elem.is_a?(Hash)
-              raise Error, 'The arguments must be a String or Hash.'
+            if elem.is_a?(Hash)
+              elem.inject '' do |out, (key, value)|
+                value ? out << key.to_s << ' ' : out
+              end.strip
+            else
+              elem.to_s
             end
-
-            elem.inject '' do |out, (key, value)|
-              value ? out << key.to_s << ' ' : out
-            end.strip
           end
       end
     end

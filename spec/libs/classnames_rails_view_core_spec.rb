@@ -44,4 +44,10 @@ describe 'Classnames::Rails::View::Core' do
       expect(core.exec({ foo: false, bar: false }, 'baz')).to eq('baz')
     end
   end
+
+  context 'nil and false args' do
+    it 'should be ignored.' do
+      expect(core.exec(nil, { foo: nil, bar: true }, false)).to eq('bar')
+    end
+  end
 end

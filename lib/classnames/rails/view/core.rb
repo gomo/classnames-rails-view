@@ -16,6 +16,8 @@ module Classnames
               elem.inject '' do |out, (key, value)|
                 value ? out << key.to_s << ' ' : out
               end.strip
+            elsif elem == false
+              ''
             else
               elem.to_s
             end

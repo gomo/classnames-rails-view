@@ -1,5 +1,5 @@
 # Classnames::Rails::View
-Short description and motivation.
+This is a view helper that dynamically generates class attributes in Rails view.
 
 ## Usage
 How to use my plugin.

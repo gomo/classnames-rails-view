@@ -3,10 +3,7 @@ module Classnames
     module View
       class Core
         def exec(*args)
-          args.inject '' do |out, arg|
-            detected = detect_elem arg
-            arg == '' ? out : out << detected << ' '
-          end.strip
+          inject_values args
         end
 
         private
@@ -16,11 +13,20 @@ module Classnames
               elem.inject '' do |out, (key, value)|
                 value ? out << key.to_s << ' ' : out
               end.strip
+            elsif elem.is_a?(Array)
+              inject_values elem
             elsif elem == false
               ''
             else
               elem.to_s
             end
+          end
+
+          def inject_values(values)
+            values.inject '' do |out, value|
+              detected = detect_elem(value)
+              detected == '' ? out : out << detect_elem(value) << ' '
+            end.strip
           end
       end
     end

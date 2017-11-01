@@ -33,6 +33,19 @@ describe 'Classnames::Rails::View::Core' do
     end
   end
 
+  context 'array args' do
+    it 'should be recursively flattened as per the rules.' do
+      expect(core.exec(
+        'foo', [
+          'bar',
+          { baz: true, qux: false },
+          ['quux', nil, { corge: false, grault: true }],
+          false
+        ]
+      )).to eq('foo bar baz quux grault')
+    end
+  end
+
   context 'mixed args' do
     it 'should be output the class attribute with space according as the argument.' do
       expect(core.exec('baz', foo: false, bar: false)).to eq('baz')

@@ -55,6 +55,8 @@ describe 'Classnames::Rails::View::Core' do
       expect(core.exec({ foo: true, bar: true }, 'baz')).to eq('foo bar baz')
       expect(core.exec({ foo: true, bar: false }, 'baz')).to eq('foo baz')
       expect(core.exec({ foo: false, bar: false }, 'baz')).to eq('baz')
+
+      expect(core.exec({ foo: false, bar: false }, 'baz', ['qux', { quux: true }, nil])).to eq('baz qux quux')
     end
   end
 

@@ -7,7 +7,7 @@ The Helper method is included automatically, so you can use it immediately.
 
 ```erb
 <div class="<%= classNames('foo') %>">Hello World</div>
-# <div class="foo">Hello World</div>
+<%# <div class="foo">Hello World</div> %>
 ```
 
 The `classNames` method takes any number of arguments which can be a string or hash.

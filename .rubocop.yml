@@ -64,3 +64,6 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Max: 20
 
+Naming/FileName:
+  Exclude:
+    - 'lib/classnames-rails-view.rb'

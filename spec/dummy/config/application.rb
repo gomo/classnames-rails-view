@@ -15,7 +15,5 @@ module Dummy
     # -- all .rb files in that directory are automatically loaded.
 
     config.classnames_rails_view.method_name = :cn
-
-    config.active_record.sqlite3.represent_boolean_as_integer = true
   end
 end

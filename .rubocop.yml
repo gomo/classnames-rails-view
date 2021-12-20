@@ -1,4 +1,5 @@
 AllCops:
+  TargetRubyVersion: 2.7.5
   Exclude:
     - 'vendor/**/*'
     - 'node_modules/**/*'
@@ -12,11 +13,6 @@ AllCops:
 
   DisplayCopNames: true
 
-Metrics/LineLength:
-  Exclude:
-    - classnames-rails-view.gemspec
-    - spec/dummy/config/**/*
-    - spec/dummy/Rakefile
 
 Metrics/BlockLength:
   Exclude:
@@ -39,7 +35,7 @@ Lint/AmbiguousBlockAssociation:
   Exclude:
     - "spec/**/*"
 
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   EnforcedStyle: 'consistent'
 
 Layout/AlignParameters:
@@ -51,7 +47,7 @@ Layout/SpaceInsideBlockBraces:
 Style/BracesAroundHashParameters:
   EnforcedStyle: context_dependent
 
-Layout/FirstParameterIndentation:
+Layout/IndentFirstArgument:
   EnforcedStyle: consistent
 
 Metrics/LineLength:
@@ -60,6 +56,10 @@ Metrics/LineLength:
   URISchemes:
     - http
     - https
+  Exclude:
+    - classnames-rails-view.gemspec
+    - spec/dummy/config/**/*
+    - spec/dummy/Rakefile
 
 Metrics/MethodLength:
   Max: 20

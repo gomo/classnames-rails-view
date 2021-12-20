@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   s.require_paths = ['lib']
 
-  s.add_dependency 'rails', '>= 5.0', '<= 6.1.3.1'
+  s.add_dependency 'rails', '>= 5.0', '<= 7.1'
 
   s.add_development_dependency 'pry-byebug'
   s.add_development_dependency 'pry-doc'
@@ -25,5 +25,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry-stack_explorer'
   s.add_development_dependency 'rails-controller-testing'
   s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'rubocop', '=0.71.0'
   s.add_development_dependency 'sqlite3'
 end

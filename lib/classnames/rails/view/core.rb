@@ -12,9 +12,7 @@ module Classnames
 
           def detect_elem(elem)
             if elem.is_a?(Hash)
-              elem.inject '' do |out, (key, value)|
-                value ? out << key.to_s << ' ' : out
-              end.strip
+              elem.filter{|k, v| v }.map{|k, v| k }.join(' ')
             elsif elem.is_a?(Array)
               inject_values elem
             elsif elem == false
@@ -25,10 +23,7 @@ module Classnames
           end
 
           def inject_values(values)
-            values.inject '' do |out, value|
-              detected = detect_elem(value)
-              detected == '' ? out : out << detect_elem(value) << ' '
-            end.strip
+            values.map {|value| detect_elem(value) }.reject(&:empty?).join(' ')
           end
       end
     end

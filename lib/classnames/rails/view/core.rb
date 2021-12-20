@@ -12,7 +12,7 @@ module Classnames
 
           def detect_elem(elem)
             if elem.is_a?(Hash)
-              elem.filter{|k, v| v }.map{|k, v| k }.join(' ')
+              elem.filter {|_k, v| v }.map {|k, _v| k }.join(' ')
             elsif elem.is_a?(Array)
               inject_values elem
             elsif elem == false

@@ -21,4 +21,4 @@ module Classnames
   end
 end
 
-ActionView::Base.send :include, Classnames::Rails::View::Helper
+ActionView::Base.include Classnames::Rails::View::Helper

@@ -1,3 +1,5 @@
+require: rubocop-rails
+
 AllCops:
   TargetRubyVersion: 2.7.5
   Exclude:
@@ -21,6 +23,9 @@ Metrics/BlockLength:
 Rails:
   Enabled: true
 
+Rails/FilePath:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 
@@ -29,7 +34,7 @@ Style/ConditionalAssignment:
 
 
 Layout/IndentationConsistency:
-  EnforcedStyle: rails
+  EnforcedStyle: indented_internal_methods
 
 Lint/AmbiguousBlockAssociation:
   Exclude:

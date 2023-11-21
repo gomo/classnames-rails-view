@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   s.require_paths = ['lib']
 
-  s.add_dependency 'rails', '>= 5.0', '<= 6.1.4.4'
+  s.add_dependency 'rails', '>= 5.0', '<= 7.1.1'
 
   s.add_development_dependency 'pry-byebug'
   s.add_development_dependency 'pry-doc'

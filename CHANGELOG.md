@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.1
+
+- Verify the existing core and view integration specs with Ruby 4.0.9 and Rails 8.1.4.
+- Use Ruby 4.0.9 and Bundler 4.0.20 for development.
+- Preserve class name generation behavior and existing Ruby and Rails requirements.
+
 ## 2.2.0
 
 - Allow Rails versions below 8.2, including Rails 8.0 and 8.1, while retaining the existing Rails minimum.

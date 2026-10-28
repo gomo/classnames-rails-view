@@ -17,19 +17,20 @@ Gem::Specification.new do |s|
   s.description = "Make methods similar to Javascript 's classnames available in the rails erb template."
   s.license     = 'MIT'
 
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md', 'CHANGELOG.md']
   s.require_paths = ['lib']
 
-  s.add_dependency 'rails', '>= 5.0', '<= 7.1.1'
+  s.add_dependency 'rails', '>= 5.0', '< 8.2'
 
   s.add_development_dependency 'pry-byebug'
   s.add_development_dependency 'pry-doc'
   s.add_development_dependency 'pry-rails'
   s.add_development_dependency 'pry-stack_explorer'
   s.add_development_dependency 'rails-controller-testing'
-  s.add_development_dependency 'rspec', '=3.10'
-  s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'rubocop', '=0.75.0'
+  s.add_development_dependency 'rspec', '~> 3.13'
+  s.add_development_dependency 'rspec-rails', '~> 8.0'
+  s.add_development_dependency 'rubocop', '~> 1.0'
   s.add_development_dependency 'rubocop-rails'
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'sprockets-rails'
+  s.add_development_dependency 'sqlite3', '~> 2.1'
 end

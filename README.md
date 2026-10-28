@@ -65,7 +65,11 @@ $ bundle
 
 ## Contributing
 
+Development uses Ruby 3.4.12. Version 2.2.0 is tested with Rails 8.1.4.
+Earlier Rails versions remain allowed by the gemspec; they are not all covered by this test run.
+
 * The test uses Rspec. Please execute the test with `rspec` command.
+* `bundle exec rake` also runs the RSpec suite.
 * Please code check with [rubocop](https://github.com/bbatsov/rubocop).
 
 ## License

@@ -65,7 +65,8 @@ $ bundle
 
 ## Contributing
 
-Development uses Ruby 3.4.12. Version 2.2.0 is tested with Rails 8.1.4.
+Development uses Ruby 4.0.9 and Bundler 4.0.20.
+The existing test suite passes with Rails 8.1.4 on Ruby 3.4.12 and Ruby 4.0.9.
 Earlier Rails versions remain allowed by the gemspec; they are not all covered by this test run.
 
 * The test uses Rspec. Please execute the test with `rspec` command.
